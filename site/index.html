@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarence Johnson × elunic AG — Bewerbung als AI Consultant</title>
+<meta name="description" content="Eine durchgespielte Einstellung: Was Clarence Johnson als AI Consultant bei elunic in den ersten 12 Monaten konkret liefert. 13 Jahre Projekt- & Bauleitung trifft echte KI-Praxis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0090d4;        /* elunic-Markenblau */
+  --blue-dk:#00385e;     /* elunic-Navy */
+  --blue-deep:#013058;
+  --violet:#883ea7;      /* eluna Agenten-Violett */
+  --violet-lt:#ca91ff;
+  --ink:#0e1726;
+  --body:#3a4658;
+  --mute:#6b7889;
+  --line:#e6ebf2;
+  --bg:#ffffff;
+  --bg-soft:#f4f7fb;
+  --bg-navy:#001b30;
+  --display:'Manrope',system-ui,sans-serif;
+  --text:'Inter',system-ui,sans-serif;
+  --maxw:980px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--text);color:var(--body);background:var(--bg);
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--display);color:var(--ink);line-height:1.12;letter-spacing:-.02em;}
+a{color:var(--blue);text-decoration:none;}
+strong{color:var(--ink);font-weight:700;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+/* progress bar */
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--violet));width:0;z-index:100;transition:width .1s linear;}
+
+/* eyebrow / labels */
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--blue);display:inline-block;}
+.eyebrow.v{color:var(--violet);}.eyebrow.v::before{background:var(--violet);}
+
+/* ===== HERO ===== */
+.hero{position:relative;background:radial-gradient(120% 120% at 80% -10%,#0a2f4d 0%,var(--bg-navy) 55%,#000d18 100%);
+  color:#dce8f4;padding:96px 0 104px;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;
+  background:radial-gradient(40% 60% at 88% 18%,rgba(136,62,167,.32),transparent 70%),
+             radial-gradient(48% 55% at 12% 92%,rgba(0,144,212,.28),transparent 70%);pointer-events:none;}
+.hero .wrap{position:relative;z-index:2;}
+.hero-top{display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--display);font-size:13px;letter-spacing:.06em;color:#8fb6d6;margin-bottom:70px;}
+.hero-top b{color:#fff;font-weight:700;}
+.hero h1{color:#fff;font-size:clamp(38px,6vw,68px);font-weight:800;max-width:15ch;}
+.hero h1 .hl{background:linear-gradient(100deg,var(--blue) 10%,var(--violet-lt) 95%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.hero .lede{font-size:clamp(18px,2.3vw,22px);color:#b8cfe2;max-width:46ch;margin-top:26px;line-height:1.55;}
+.hero .who{margin-top:40px;display:flex;flex-wrap:wrap;gap:10px;}
+.chip{font-family:var(--display);font-size:13px;font-weight:600;color:#cfe2f2;
+  border:1px solid rgba(255,255,255,.2);border-radius:100px;padding:8px 16px;background:rgba(255,255,255,.04);}
+.chip.v{border-color:rgba(202,145,255,.45);color:var(--violet-lt);}
+.scrollcue{margin-top:58px;font-family:var(--display);font-size:13px;letter-spacing:.14em;
+  text-transform:uppercase;color:#6f9abb;display:flex;align-items:center;gap:12px;}
+.scrollcue::before{content:"";width:1px;height:30px;background:linear-gradient(var(--blue),transparent);}
+
+/* ===== SECTION base ===== */
+section{padding:84px 0;}
+.section-head{max-width:62ch;margin-bottom:46px;}
+.section-head h2{font-size:clamp(28px,4vw,42px);font-weight:800;margin:16px 0 16px;}
+.section-head p{font-size:18px;color:var(--mute);}
+.soft{background:var(--bg-soft);}
+.navy{background:var(--bg-navy);color:#c4d6e6;}
+.navy h2,.navy h3,.navy h4{color:#fff;}
+.navy .section-head p{color:#8fb6d6;}
+
+/* fit / mapping */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.fit .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;
+  box-shadow:0 1px 2px rgba(13,40,80,.04);}
+.fit .card .ask{font-family:var(--display);font-weight:700;color:var(--violet);font-size:13px;
+  letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px;display:flex;gap:8px;align-items:baseline;}
+.fit .card h3{font-size:19px;margin-bottom:9px;}
+.fit .card p{font-size:15.5px;color:var(--body);}
+
+/* ===== TIMELINE ===== */
+.timeline{position:relative;margin-top:18px;}
+.timeline::before{content:"";position:absolute;left:21px;top:8px;bottom:8px;width:2px;
+  background:linear-gradient(var(--blue),var(--violet));}
+.tl{position:relative;padding:0 0 46px 64px;}
+.tl:last-child{padding-bottom:0;}
+.tl .dot{position:absolute;left:11px;top:2px;width:22px;height:22px;border-radius:50%;
+  background:#fff;border:3px solid var(--blue);box-shadow:0 0 0 5px rgba(0,144,212,.1);}
+.tl.v .dot{border-color:var(--violet);box-shadow:0 0 0 5px rgba(136,62,167,.12);}
+.tl .when{font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--blue);}
+.tl.v .when{color:var(--violet);}
+.tl h3{font-size:22px;margin:7px 0 12px;}
+.tl p{font-size:16.5px;}
+.tl ul{margin:14px 0 0;padding:0;list-style:none;}
+.tl ul li{position:relative;padding:5px 0 5px 24px;font-size:16px;}
+.tl ul li::before{content:"";position:absolute;left:2px;top:13px;width:8px;height:8px;border-radius:2px;
+  background:var(--blue);transform:rotate(45deg);}
+.tl.v ul li::before{background:var(--violet);}
+.tl .out{margin-top:16px;display:inline-block;background:var(--bg-soft);border-left:3px solid var(--blue);
+  padding:11px 16px;border-radius:0 8px 8px 0;font-size:15px;}
+.tl.v .out{border-left-color:var(--violet);}
+.tl .out b{color:var(--ink);}
+
+/* proof project */
+.proof{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center;}
+.proof .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(202,145,255,.14);
+  color:var(--violet-lt);border:1px solid rgba(202,145,255,.4);border-radius:100px;
+  padding:7px 15px;font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.04em;}
+.proof h2{font-size:clamp(26px,3.5vw,36px);margin:18px 0 16px;}
+.proof p{color:#b8cfe2;font-size:17px;}
+.proof .panel{background:linear-gradient(150deg,rgba(136,62,167,.22),rgba(0,144,212,.14));
+  border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:30px;}
+.proof .panel .row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.proof .panel .row:last-child{border-bottom:0;}
+.proof .panel .k{color:#8fb6d6;font-size:14px;}
+.proof .panel .val{color:#fff;font-family:var(--display);font-weight:700;font-size:15px;text-align:right;}
+.proof .panel .val.go{color:var(--violet-lt);}
+
+/* bau stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:8px;}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 22px;text-align:left;}
+.stat .n{font-family:var(--display);font-weight:800;font-size:40px;
+  background:linear-gradient(120deg,var(--blue),var(--violet));-webkit-background-clip:text;
+  background-clip:text;-webkit-text-fill-color:transparent;line-height:1;}
+.stat .l{margin-top:10px;font-size:14.5px;color:var(--body);}
+.bridge{margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px 30px;
+  display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;}
+.bridge .side h4{font-size:17px;margin-bottom:8px;}
+.bridge .side p{font-size:15px;color:var(--body);}
+.bridge .arrow{font-size:30px;color:var(--violet);font-weight:800;}
+@media(max-width:760px){.bridge{grid-template-columns:1fr;text-align:center;}.bridge .arrow{transform:rotate(90deg);}}
+
+/* why elunic */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.why .c{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;}
+.why .c .ic{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--blue),var(--violet));color:#fff;font-family:var(--display);font-weight:800;margin-bottom:14px;}
+.why .c h4{font-size:17px;margin-bottom:8px;}
+.why .c p{font-size:15px;}
+
+/* honest */
+.honest{background:#fff;border:1px solid var(--line);border-left:4px solid var(--violet);
+  border-radius:0 16px 16px 0;padding:30px 34px;max-width:74ch;}
+.honest h3{font-size:20px;margin-bottom:12px;}
+.honest p{font-size:16.5px;}
+
+/* CTA */
+.cta{background:radial-gradient(120% 120% at 20% 0%,#0a2f4d,var(--bg-navy) 60%,#000d18);color:#dce8f4;text-align:center;}
+.cta h2{color:#fff;font-size:clamp(28px,4.5vw,46px);max-width:18ch;margin:18px auto 18px;}
+.cta p{color:#b8cfe2;font-size:18px;max-width:50ch;margin:0 auto 36px;}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:16px;
+  padding:15px 28px;border-radius:100px;transition:transform .15s ease,box-shadow .15s ease;}
+.btn.primary{background:linear-gradient(100deg,var(--blue),var(--violet));color:#fff;box-shadow:0 10px 30px rgba(0,144,212,.35);}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(136,62,167,.4);}
+.btn.ghost{border:1px solid rgba(255,255,255,.28);color:#fff;}
+.btn.ghost:hover{background:rgba(255,255,255,.07);}
+.signature{margin-top:46px;font-family:var(--display);}
+.signature .nm{font-size:24px;font-weight:800;color:#fff;}
+.signature .ti{color:#8fb6d6;font-size:14px;margin-top:4px;letter-spacing:.04em;}
+
+/* footer */
+footer{background:#000d18;color:#5f7d97;padding:34px 0;font-size:13.5px;}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+footer a{color:#8fb6d6;}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+@media(max-width:760px){
+  .fit,.proof,.why,.stats{grid-template-columns:1fr;}
+  .stats{grid-template-columns:1fr 1fr;}
+  .hero-top{flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:48px;}
+  .tl{padding-left:54px;}
+  section{padding:62px 0;}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="prog"></div>
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>BEWERBUNG · <b>AI CONSULTANT (m/w/d)</b></div>
+      <div>für die <b>elunic AG</b> · Festanstellung · Remote</div>
+    </div>
+    <div class="eyebrow" style="color:#8fb6d6;">Eine durchgespielte Einstellung</div>
+    <h1>Stellen Sie sich vor, <span class="hl">Clarence Johnson</span> fängt nächsten Monat bei elunic an.</h1>
+    <p class="lede">Diese Seite ist kein klassisches Anschreiben. Sie zeigt Schritt für Schritt,
+      was in den ersten 12 Monaten passiert — entlang Ihrer Stellenausschreibung. Damit Sie
+      vor dem ersten Call schon sehen, wofür Sie mich einstellen.</p>
+    <div class="who">
+      <span class="chip">13 Jahre Projekt- &amp; Bauleitung</span>
+      <span class="chip">Stakeholder vom Operator bis zur CTO</span>
+      <span class="chip v">2+ Jahre KI-Praxis &amp; eigene Agenten</span>
+      <span class="chip v">M. Eng. Project Management</span>
+    </div>
+    <div class="scrollcue">So läuft es ab</div>
+  </div>
+</header>
+
+<!-- ===================== WARUM DIESE SEITE / FIT ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Der Abgleich</div>
+      <h2>Ihre Rolle ist fast wörtlich das, was ich seit 13 Jahren tue — nur jetzt mit KI.</h2>
+      <p>Sie suchen jemanden, der Projekte ganzheitlich verantwortet, zwischen Tech und Business
+         übersetzt und Kunden weiterentwickelt. Genau das war Bauleitung im Kern. Hier der direkte Abgleich.</p>
+    </div>
+    <div class="fit">
+      <div class="card reveal">
+        <div class="ask">◆ Ihre Anforderung</div>
+        <h3>Ganzheitliche Projekt-Ownership: Timings, Budgets, Abstimmungen</h3>
+        <p>Auf Großbaustellen wie dem <strong>Omniturm Frankfurt</strong> (ca. 120 Mio. €) habe ich
+           Termine, Budgets, Gewerke und Abnahmen 13 Jahre lang ergebnisorientiert verantwortet —
+           unter echtem Termin- und Kostendruck. Ownership ist für mich kein Buzzword.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ask">◆ Ihre Anforderung</div>
+        <h3>Bindeglied zwischen Tech &amp; Business — vom eluna-Manager bis zur CTO</h3>
+        <p>Ich habe täglich zwischen Bauherren, Planern, Fachfirmen und Behörden übersetzt.
+           Vom Polier auf der Platte bis zum Vorstand des Bauherrn — Sprache wechseln, ohne den
+           Faden zu verlieren, ist Routine.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ask">◆ Ihre Anforderung</div>
+        <h3>Vertriebsauftrag: Rebuy &amp; Upselling beim Bestandskunden</h3>
+        <p>Aus laufenden Projekten entstehen die nächsten. Nachträge verhandeln, Folgegewerke
+           platzieren, Vertrauen über Lieferung aufbauen — das ist Bestandskunden-Entwicklung,
+           nur hieß sie auf dem Bau anders.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ask">◆ Ihre Anforderung</div>
+        <h3>Technisches Schnittstellen-Verständnis: LLMs, Automatisierung, Vibe Coding</h3>
+        <p>Seit über zwei Jahren baue ich selbst: LLM-Workflows, RAG, Multi-Agenten-Systeme,
+           Automationen mit n8n &amp; APIs — hands-on in <strong>Cursor</strong> und Claude Code.
+           Ihr „Nice to have" ist mein Alltag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TIMELINE ===================== -->
+<section class="soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow v">Der Fahrplan</div>
+      <h2>Was Clarence Johnson in den ersten 12 Monaten konkret liefert.</h2>
+      <p>Kein vages „ich würde gerne …". Hier sind die Meilensteine, mit denen ich in die Rolle
+         hineinwachse und sie ausfülle — Outcome-orientiert, wie Sie es fordern.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl reveal">
+        <div class="dot"></div>
+        <div class="when">Tag 1 – 30 · Ankommen &amp; verstehen</div>
+        <h3>Ich lerne eluna, AI.SEE und Ihre Kunden so, wie ich eine Baustelle übernehme.</h3>
+        <p>Bei einer Projektübernahme verschaffe ich mir zuerst ein präzises Bild, bevor ich rede.
+           Genauso hier.</p>
+        <ul>
+          <li>Hands-on in die eluna-Plattform: selbst Agenten bauen, nicht nur Slides lesen.</li>
+          <li>Shadowing bei 2–3 laufenden Kundenprojekten + Gespräche mit Sales, Produkt und Dev.</li>
+          <li>Erste Landkarte der Kundenkontakte: wer entscheidet, wo steckt ungenutztes Potenzial.</li>
+        </ul>
+        <div class="out"><b>Ergebnis:</b> ein 1-Seiten-Lagebild je Projekt — Stand, Risiken, nächste Outcomes.</div>
+      </div>
+
+      <div class="tl reveal">
+        <div class="dot"></div>
+        <div class="when">Monat 2 – 3 · Ownership übernehmen</div>
+        <h3>Ich übernehme erste Projekte vollständig — Timings, Budget, Abstimmungen.</h3>
+        <p>Genau die Disziplin aus der Bauleitung: Plan, Meilensteine, klare Kommunikation in alle
+           Richtungen, Dinge aktiv vorantreiben.</p>
+        <ul>
+          <li>Workshops führen, Anforderungen schärfen, Use Cases in lieferbare Pakete schneiden.</li>
+          <li>Entwickler:innen und Freelancer:innen Richtung geben — nicht nur Feedback, sondern Führung.</li>
+          <li>Wöchentliches Outcome-Tracking statt Status-Theater.</li>
+        </ul>
+        <div class="out"><b>Ergebnis:</b> erste Projekte laufen messbar pünktlicher und ruhiger durch.</div>
+      </div>
+
+      <div class="tl v reveal">
+        <div class="dot"></div>
+        <div class="when">Monat 4 – 6 · Kunden entwickeln</div>
+        <h3>Aus zufriedenen Kunden mache ich Folgeprojekte.</h3>
+        <p>Rebuy und Upselling als Kern der Rolle — bei mir entsteht das aus echter Lieferung, nicht
+           aus Druck. Verkauf als Mehrwert-Gestaltung, genau wie Sie es beschreiben.</p>
+        <ul>
+          <li>Pro Bestandskunde 1–2 konkrete Folge-Use-Cases identifizieren und mit Sales/Produkt platzieren.</li>
+          <li>Beratung auf Augenhöhe — vom eluna-Manager bis zur CTO, mit Klarheit und Struktur.</li>
+          <li>Industrie-Domänenwissen einbringen: ich verstehe Bau, Anlagen, Abläufe vor Ort wirklich.</li>
+        </ul>
+        <div class="out"><b>Ergebnis:</b> messbarer Rebuy/Upsell-Beitrag im eigenen Kundenportfolio.</div>
+      </div>
+
+      <div class="tl v reveal">
+        <div class="dot"></div>
+        <div class="when">Monat 7 – 12 · Skalieren &amp; gestalten</div>
+        <h3>Ich werde zum verlässlichen Bindeglied, das Teams liefern lässt — und Geschäft baut.</h3>
+        <p>Eigenverantwortung, Struktur in dynamische Projekte, selbstständige Priorisierung.
+           Ich gestalte mit, statt zu verwalten.</p>
+        <ul>
+          <li>Wiederverwendbare Vorgehensmuster für Workshops, Scoping und Übergaben etablieren.</li>
+          <li>Auf AI-Hackathons eigene Use Cases beisteuern — ich baue selbst, nicht nur konzipieren.</li>
+          <li>Bau-/Industrie-Vertical aktiv mitentwickeln: ein Feld, das ich von innen kenne.</li>
+        </ul>
+        <div class="out"><b>Ergebnis:</b> ein Consultant, der Outcomes liefert <b>und</b> das Geschäft weiterdreht.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROOF: HACKATHON PROJEKT ===================== -->
+<section class="navy">
+  <div class="wrap">
+    <div class="proof">
+      <div class="reveal">
+        <span class="badge">● Bereits gebaut, eingereicht &amp; fertig</span>
+        <h2>Mein Beweis, dass Bau + KI bei mir zusammenkommen: „Permit Watchdog for Construction".</h2>
+        <p>Für den <strong style="color:#fff;">Google&nbsp;I/O 2026 Hackathon</strong> (Deadline September 2026)
+           habe ich eine KI-Anwendung für die Baubranche gebaut — ein Agenten-/LLM-System, das
+           Genehmigungs- und Compliance-Prozesse im Bau überwacht. Projekt ist <strong style="color:#fff;">fertiggestellt
+           und eingereicht</strong>.</p>
+        <p style="margin-top:14px;">Das ist genau die Schnittmenge, die elunic für die Industrie schafft:
+           KI, die in einer realen, physischen Domäne echten Mehrwert bringt — und ich bringe die
+           Domäne aus 13 Jahren Praxis mit.</p>
+      </div>
+      <div class="panel reveal">
+        <div class="row"><span class="k">Projekt</span><span class="val">Permit Watchdog for Construction</span></div>
+        <div class="row"><span class="k">Kontext</span><span class="val">Google I/O 2026 Hackathon</span></div>
+        <div class="row"><span class="k">Deadline</span><span class="val">September 2026</span></div>
+        <div class="row"><span class="k">Status</span><span class="val go">Fertig &amp; eingereicht ✓</span></div>
+        <div class="row"><span class="k">Stack</span><span class="val">LLM-Agenten · Automatisierung · Web-App</span></div>
+        <div class="row"><span class="k">Domäne</span><span class="val">Bau / Compliance / Industrie</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BAU-ERFAHRUNG GROSS ===================== -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">Das Fundament</div>
+      <h2>13 Jahre Projekt- &amp; Bauleitung. Das ist kein Nebensatz — das ist meine Superkraft.</h2>
+      <p>elunic baut KI für die <strong>Industrie</strong> — für Produktion, Anlagen, reale Prozesse.
+         Ihre Kund:innen sind keine Tech-Startups, sondern Menschen, die etwas Physisches herstellen.
+         Genau diese Welt kenne ich von innen.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><div class="n">13</div><div class="l">Jahre Projekt- &amp; Bauleitung (ca. 2012–2025)</div></div>
+      <div class="stat reveal"><div class="n">120<span style="font-size:22px;">M €</span></div><div class="l">Volumen Leitprojekt Omniturm Frankfurt</div></div>
+      <div class="stat reveal"><div class="n">∞</div><div class="l">Gewerke, Stakeholder &amp; Eskalationen koordiniert</div></div>
+      <div class="stat reveal"><div class="n">M.Eng</div><div class="l">Master Project Management, SRH Heidelberg</div></div>
+    </div>
+
+    <div class="bridge reveal">
+      <div class="side">
+        <h4>Was ich auf der Baustelle gemacht habe</h4>
+        <p>Termine, Budgets &amp; Gewerke verantwortet · zwischen Bauherr, Planern und Fachfirmen
+           übersetzt · unter Druck Entscheidungen getroffen · Eskalationen und Nachträge gemanagt ·
+           Teams Richtung gegeben · Qualität gegen Termin gehalten.</p>
+      </div>
+      <div class="arrow">→</div>
+      <div class="side">
+        <h4>Was die AI-Consultant-Rolle verlangt</h4>
+        <p>Projekt-Ownership über Timings &amp; Budgets · Bindeglied Tech↔Business · Stakeholder vom
+           Manager bis zur CTO · Drive, Dinge voranzubringen · Teams liefern lassen · Outcomes
+           statt Status-Folien.</p>
+      </div>
+    </div>
+    <p class="reveal" style="margin-top:26px;font-size:18px;max-width:70ch;">
+      <strong>Es ist dieselbe Rolle.</strong> Eine Baustelle ist der ehrlichste „Shopfloor", den es gibt:
+      viele Beteiligte, harte Termine, echtes Budget, keine Ausreden. Ich bringe diese Steuerungs-
+      und Stakeholder-Kompetenz mit — und kombiniere sie mit der KI-Praxis, die ich mir in den
+      letzten zwei Jahren selbst aufgebaut habe.</p>
+  </div>
+</section>
+
+<!-- ===================== WARUM ELUNIC / WARUM ICH ===================== -->
+<section class="soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow v">Warum elunic, warum ich</div>
+      <h2>Sie setzen nicht auf Slide-Decks, sondern auf Verstehen, Vereinfachen, Anwenden. Ich auch.</h2>
+    </div>
+    <div class="why">
+      <div class="c reveal"><div class="ic">01</div><h4>Ich beweise mit Gebautem, nicht mit Theorie</h4>
+        <p>Eigene Agenten-Systeme, Automationen und im App Store veröffentlichte Apps. Sie beraten auf
+           Basis funktionierender Lösungen — ich bewerbe mich genauso.</p></div>
+      <div class="c reveal"><div class="ic">02</div><h4>Ich bringe die Industrie-Domäne mit</h4>
+        <p>Ihre Kund:innen sitzen in Produktion und Anlagenbau. Ich habe 13 Jahre in genau solchen
+           physischen, prozessgetriebenen Umgebungen gearbeitet — das versteht nicht jeder Consultant.</p></div>
+      <div class="c reveal"><div class="ic">03</div><h4>Ich bin Enabler, kein Dienstleister von der Seitenlinie</h4>
+        <p>Ihr Selbstverständnis als „Enablement-Partner auf Augenhöhe" ist genau meine Haltung:
+           kooperativ, aber ergebnisorientiert. Die Arbeit muss gemacht werden.</p></div>
+    </div>
+
+    <div class="honest reveal" style="margin-top:34px;">
+      <h3>Ehrlich gesagt</h3>
+      <p>Klassische Jahre im IT-Consulting bringe ich nicht mit — die sind in Ihrer Ausschreibung
+         auch nicht zwingend. Was ich biete: echte Projekt- und Stakeholder-Verantwortung aus
+         Großprojekten, dazu zwei Jahre praktische, lauffähige KI-Arbeit. Ich verkaufe mich nicht als
+         Senior-Data-Scientist und nicht als langjährigen Agenten-Guru. Ich verkaufe einen Umsetzer,
+         der Outcomes liefert, Menschen mitnimmt und schnell lernt — und der Ihr „Nice to have"
+         (Cursor, Vibe Coding, LLMs) längst lebt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="cta">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#8fb6d6;justify-content:center;">Der nächste Schritt</div>
+    <h2>Lassen Sie uns den Kennenlern-Call machen.</h2>
+    <p>Sie wollten ohnehin mit einem kurzen Call starten, dann ein Fachgespräch und einen kleinen
+       Use Case. Den Use Case bringe ich gern schon mit — Bau + KI ist meine Heimat. Ein kurzes
+       Vorstellungsvideo reiche ich auf Wunsch nach.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:clarencejohnson@hotmail.de?subject=AI%20Consultant%20bei%20elunic%20%E2%80%93%20Kennenlern-Call">Kennenlern-Call vereinbaren</a>
+      <a class="btn ghost" href="https://www.rebelzai.com">Meine KI-Projekte ansehen</a>
+    </div>
+    <div class="signature">
+      <div class="nm">Clarence Johnson</div>
+      <div class="ti">M. Eng. Project Management · Mannheim · +49 162 1811123</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>© 2026 Clarence Johnson · Bewerbung als AI Consultant (m/w/d) bei der elunic AG</div>
+    <div>
+      <a href="mailto:clarencejohnson@hotmail.de">clarencejohnson@hotmail.de</a> ·
+      <a href="https://www.rebelzai.com">rebelzai.com</a> ·
+      <a href="https://www.linkedin.com/in/clarence-johnson-898b50a4/">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// progress bar
+var prog=document.getElementById('prog');
+window.addEventListener('scroll',function(){
+  var h=document.documentElement;
+  var s=(h.scrollTop)/(h.scrollHeight-h.clientHeight);
+  prog.style.width=(s*100)+'%';
+},{passive:true});
+// reveal on scroll
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
