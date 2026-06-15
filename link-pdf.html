@@ -3,73 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <title>Bewerbung Clarence Johnson — AI Consultant · elunic AG</title>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
   @page{size:A4;margin:0;}
   *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  html,body{font-family:'Inter',sans-serif;}
+  html,body{font-family:'Manrope',sans-serif;}
   .page{
-    width:210mm;height:297mm;position:relative;color:#dce8f4;
-    background:radial-gradient(120% 110% at 82% -8%,#0a2f4d 0%,#001b30 55%,#000d18 100%);
-    display:flex;flex-direction:column;justify-content:center;padding:0 30mm;overflow:hidden;
+    width:210mm;height:297mm;position:relative;overflow:hidden;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    padding:0 9mm;color:#fff;
+    background:
+      radial-gradient(60% 50% at 12% 8%, rgba(0,144,212,.55), transparent 60%),
+      radial-gradient(60% 50% at 90% 96%, rgba(136,62,167,.6), transparent 60%),
+      linear-gradient(135deg, #0090d4 0%, #015b86 32%, #00385e 55%, #4a2a78 80%, #883ea7 100%);
   }
+  /* subtle grain/sheen */
   .page::after{content:"";position:absolute;inset:0;
-    background:radial-gradient(38% 50% at 88% 16%,rgba(136,62,167,.34),transparent 70%),
-               radial-gradient(46% 50% at 10% 90%,rgba(0,144,212,.30),transparent 70%);}
-  .inner{position:relative;z-index:2;}
-  .top{position:absolute;top:24mm;left:30mm;right:30mm;display:flex;justify-content:space-between;
-    font-family:'Manrope',sans-serif;font-size:11pt;letter-spacing:.04em;color:#8fb6d6;z-index:2;}
-  .top b{color:#fff;font-weight:700;}
-  .eyebrow{font-family:'Manrope',sans-serif;font-size:10.5pt;font-weight:700;letter-spacing:.18em;
-    text-transform:uppercase;color:#0090d4;display:flex;align-items:center;gap:10px;}
-  .eyebrow::before{content:"";width:30px;height:2px;background:#0090d4;}
-  h1{font-family:'Manrope',sans-serif;font-weight:800;font-size:33pt;line-height:1.1;color:#fff;
-    letter-spacing:-.02em;margin:16px 0 18px;max-width:16ch;}
-  h1 .hl{background:linear-gradient(100deg,#0090d4 10%,#ca91ff 95%);-webkit-background-clip:text;
-    background-clip:text;-webkit-text-fill-color:transparent;}
-  .lede{font-size:13pt;line-height:1.6;color:#b8cfe2;max-width:50ch;}
-  .linkbox{margin-top:34px;background:linear-gradient(150deg,rgba(136,62,167,.24),rgba(0,144,212,.16));
-    border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:26px 30px;}
-  .linkbox .lbl{font-family:'Manrope',sans-serif;font-size:9.5pt;font-weight:700;letter-spacing:.14em;
-    text-transform:uppercase;color:#8fb6d6;margin-bottom:10px;}
-  .linkbox a{font-family:'Manrope',sans-serif;font-size:18.5pt;font-weight:800;
-    color:#fff;text-decoration:none;letter-spacing:-.01em;word-break:break-all;}
-  .linkbox a .u{color:#ca91ff;}
-  .hint{margin-top:14px;font-size:10.5pt;color:#8fb6d6;}
-  .sig{position:absolute;bottom:24mm;left:30mm;right:30mm;z-index:2;display:flex;
-    justify-content:space-between;align-items:flex-end;
-    border-top:1px solid rgba(255,255,255,.14);padding-top:16px;}
-  .sig .nm{font-family:'Manrope',sans-serif;font-weight:800;font-size:14pt;color:#fff;}
-  .sig .ti{font-size:9.5pt;color:#8fb6d6;margin-top:3px;}
-  .sig .meta{text-align:right;font-size:9.5pt;color:#8fb6d6;line-height:1.7;}
-  .sig .meta a{color:#8fb6d6;text-decoration:none;}
+    background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.07) 50%,transparent 58%);}
+  .eyebrow{position:relative;z-index:2;font-size:11pt;font-weight:700;letter-spacing:.34em;
+    text-transform:uppercase;color:rgba(255,255,255,.82);margin-bottom:20px;text-align:center;}
+  .linkwrap{position:relative;z-index:2;display:block;width:100%;text-decoration:none;}
+  .linkwrap svg{display:block;width:100%;height:auto;filter:drop-shadow(0 4px 22px rgba(0,0,0,.28));}
+  .sub{position:relative;z-index:2;margin-top:22px;font-size:13pt;font-weight:600;
+    color:rgba(255,255,255,.9);letter-spacing:.02em;text-align:center;}
+  .foot{position:absolute;z-index:2;bottom:20mm;left:0;right:0;text-align:center;
+    font-size:10.5pt;font-weight:600;color:rgba(255,255,255,.78);letter-spacing:.04em;}
+  .foot b{color:#fff;font-weight:800;}
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="top"><div>BEWERBUNG · <b>AI CONSULTANT (m/w/d)</b></div><div>für die <b>elunic AG</b></div></div>
-  <div class="inner">
-    <div class="eyebrow">Meine Bewerbung als Webseite</div>
-    <h1>Ich habe meine Bewerbung <span class="hl">durchgespielt</span>.</h1>
-    <p class="lede">Statt eines klassischen PDFs zeigt diese Seite Schritt für Schritt, was ich als
-       AI Consultant bei elunic in den ersten 12 Monaten konkret liefere — entlang Ihrer
-       Stellenausschreibung. 13 Jahre Projekt- &amp; Bauleitung trifft echte KI-Praxis.</p>
-    <div class="linkbox">
-      <div class="lbl">◆ Hier entlang</div>
-      <a href="https://elunic-clarence-johnson.vercel.app">elunic-clarence-johnson<span class="u">.vercel.app</span></a>
-      <div class="hint">Ein Klick — keine Anmeldung, keine Downloads. Am besten am Desktop.</div>
-    </div>
-  </div>
-  <div class="sig">
-    <div>
-      <div class="nm">Clarence Johnson</div>
-      <div class="ti">M. Eng. Project Management · Mannheim</div>
-    </div>
-    <div class="meta">
-      +49 162 1811123 · <a href="mailto:clarencejohnson@hotmail.de">clarencejohnson@hotmail.de</a><br>
-      rebelzai.com · linkedin.com/in/clarence-johnson
-    </div>
-  </div>
+  <div class="eyebrow">Meine Bewerbung als Webseite</div>
+
+  <a class="linkwrap" href="https://elunic-clarence-johnson.vercel.app">
+    <svg viewBox="0 0 1000 96" xmlns="http://www.w3.org/2000/svg" role="img"
+         aria-label="elunic-clarence-johnson.vercel.app">
+      <text x="0" y="74" textLength="1000" lengthAdjust="spacingAndGlyphs"
+            font-family="Manrope, sans-serif" font-weight="800" font-size="80"
+            fill="#ffffff">elunic-clarence-johnson.vercel.app</text>
+    </svg>
+  </a>
+
+  <div class="sub">Ein Klick. Keine Anmeldung. Am besten am Desktop ansehen.</div>
+
+  <div class="foot"><b>Clarence Johnson</b> &nbsp;·&nbsp; AI Consultant (m/w/d) &nbsp;·&nbsp; elunic AG &nbsp;·&nbsp; +49 162 1811123</div>
 </div>
 </body>
 </html>
