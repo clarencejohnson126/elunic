@@ -90,6 +90,22 @@ strong{color:var(--ink);font-weight:700;}
 .scrollcue .bar::after{content:"";position:absolute;top:-34px;left:0;width:1px;height:34px;background:#fff;animation:drop 2s ease-in-out infinite;}
 @keyframes drop{to{top:34px;}}
 
+/* sound toggle */
+.soundbtn{position:absolute;right:24px;bottom:24px;z-index:6;display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--display);font-weight:700;font-size:13.5px;color:#dce8f4;cursor:pointer;
+  padding:11px 17px;border-radius:100px;border:1px solid rgba(255,255,255,.24);
+  background:rgba(0,20,38,.5);backdrop-filter:blur(8px);transition:transform .2s,border-color .2s,background .2s;}
+.soundbtn:hover{transform:translateY(-2px);border-color:var(--blue);background:rgba(0,144,212,.22);}
+.soundbtn .ic{font-size:15px;line-height:1;}
+.soundbtn .eq{display:none;align-items:flex-end;gap:2.5px;height:14px;}
+.soundbtn .eq i{width:3px;height:5px;background:var(--blue);border-radius:2px;animation:eq 1s ease-in-out infinite;}
+.soundbtn .eq i:nth-child(2){animation-delay:.2s;background:var(--violet-lt);}
+.soundbtn .eq i:nth-child(3){animation-delay:.4s;}
+.soundbtn .eq i:nth-child(4){animation-delay:.15s;background:var(--violet-lt);}
+@keyframes eq{0%,100%{height:4px;}50%{height:14px;}}
+.soundbtn.on .eq{display:inline-flex;}
+@media(max-width:760px){.soundbtn{right:16px;bottom:16px;font-size:12.5px;padding:9px 14px;}}
+
 /* marquee ticker */
 .ticker{background:var(--bg-navy);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);
   overflow:hidden;white-space:nowrap;padding:14px 0;}
@@ -227,6 +243,14 @@ section.block{padding:96px 0;position:relative;}
   border-radius:0 18px 18px 0;padding:32px 36px;max-width:76ch;}
 .honest h3{font-size:20px;margin-bottom:12px;}
 .honest p{font-size:16.5px;}
+.persona{position:relative;max-width:76ch;border-radius:18px;padding:30px 34px;color:#eaf2fb;overflow:hidden;
+  background:linear-gradient(135deg,#001b30 0%,#0a2f4d 55%,#3a1f55 100%);
+  border:1px solid rgba(255,255,255,.12);box-shadow:0 22px 60px rgba(13,40,80,.18);}
+.persona::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--blue),var(--violet-lt));}
+.persona .ptag{font-family:var(--display);font-weight:700;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--violet-lt);margin-bottom:12px;}
+.persona p{font-size:17.5px;line-height:1.6;color:#dce8f4;}
+.persona p strong{color:#fff;}
 
 /* CTA */
 .cta{position:relative;text-align:center;color:#dce8f4;overflow:hidden;background:var(--bg-navy);}
@@ -272,6 +296,10 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
     <source src="assets/elunic-clip.mp4" type="video/mp4">
   </video>
   <div class="veil"></div>
+  <button id="soundbtn" class="soundbtn" aria-label="Ton einschalten">
+    <span class="ic">🔊</span><span class="tx">Ton an</span>
+    <span class="eq"><i></i><i></i><i></i><i></i></span>
+  </button>
   <div class="wrap">
     <div class="hero-top">
       <div>BEWERBUNG · <b>AI CONSULTANT (m/w/d)</b></div>
@@ -337,7 +365,7 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
         <div class="ask">◆ Ihre Anforderung</div>
         <h3>Technisches Schnittstellen-Verständnis: LLMs, Automatisierung, Vibe Coding</h3>
         <p>Seit über zwei Jahren baue ich selbst: LLM-Workflows, RAG, Multi-Agenten-Systeme, Automationen mit n8n
-           und APIs, hands-on in <strong>Cursor</strong> und Claude Code. Ihr „Nice to have" ist mein Alltag.</p>
+           und APIs, und orchestriere daraus <strong>agentische Workflows</strong>. Ihr „Nice to have" ist mein Alltag.</p>
       </div>
     </div>
   </div>
@@ -466,7 +494,7 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
   <div class="wrap">
     <div class="section-head reveal">
       <div class="eyebrow">04 · Das Fundament</div>
-      <h2>13 Jahre Projekt- &amp; Bauleitung. Das ist kein Nebensatz, das ist meine Superkraft.</h2>
+      <h2>13 Jahre Projekt- &amp; Bauleitung. Für diese Rolle gehört das nach vorne, nicht in den Nebensatz.</h2>
       <p>elunic baut KI für die <strong>Industrie</strong>: für Produktion, Anlagen, reale Prozesse. Ihre Kund:innen
          sind keine Tech-Startups, sondern Menschen, die etwas Physisches herstellen. Genau diese Welt kenne ich von
          innen. Meine Bau-Referenzen und Projekte sind unter <a href="https://www.clarencejohnson.de" target="_blank" rel="noopener"><strong>clarencejohnson.de</strong></a> einsehbar.</p>
@@ -508,11 +536,12 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
     </div>
     <div class="skills">
       <div class="skill reveal">
-        <div class="ic">{ }</div>
-        <h4>Vibe Coding &amp; Entwicklung</h4>
-        <p>Beim Vibe Coding bin ich längst über das Anfangsstadium hinaus. Ich praktiziere es täglich in Cursor und
-           Claude Code und bilde mich kontinuierlich und systematisch weiter, von Prototyp bis lauffähige App.</p>
-        <div class="tagrow"><span class="tag">Cursor</span><span class="tag">Claude Code</span><span class="tag">Python</span><span class="tag">TypeScript</span></div>
+        <div class="ic">⌘</div>
+        <h4>Agentic Workflows orchestrieren</h4>
+        <p>Mein Kern ist nicht das einzelne Skript, sondern die Orchestrierung: Ich etabliere agentische Workflows
+           entlang der drei Stellschrauben, die wirklich zählen, <strong>Prompt, Modell und Tools</strong>. Aus dieser
+           Triade entstehen Systeme, die Aufgaben eigenständig und verlässlich erledigen.</p>
+        <div class="tagrow"><span class="tag">Prompt</span><span class="tag">Modell</span><span class="tag">Tools</span><span class="tag">Orchestrierung</span></div>
       </div>
       <div class="skill reveal d1">
         <div class="ic">AI</div>
@@ -556,7 +585,17 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
          Was ich biete: echte Projekt- und Stakeholder-Verantwortung aus Großprojekten, dazu zwei Jahre praktische,
          lauffähige KI-Arbeit. Ich verkaufe mich nicht als Senior-Data-Scientist und nicht als langjährigen
          Agenten-Guru. Ich verkaufe einen Umsetzer, der Outcomes liefert, Menschen mitnimmt und schnell lernt, und der
-         Ihr „Nice to have" (Cursor, Vibe Coding, LLMs) längst lebt.</p>
+         Ihr „Nice to have" (Vibe Coding, LLMs, Agenten) längst lebt.</p>
+    </div>
+
+    <div class="persona reveal" style="margin-top:22px;">
+      <div class="ptag">Und damit Sie wissen, mit wem Sie es zu tun haben</div>
+      <p>Ich bin kein Mitläufer. Ich bringe ein bisschen Baustellengeruch mit, diesen Flair von jemandem, der dort war,
+         wo wirklich geliefert werden muss. Ich habe Ecken und Kanten, eine eigene Aura und den Mut, Dinge anders zu
+         probieren. Wenn es sein muss, haue ich auch mal auf den Tisch: robust, hartnäckig, manchmal ein Stück weit
+         rabiat, immer dann, wenn es der Sache dient. Unterm Strich bin ich aber ein guter Typ, der mitzieht,
+         Verantwortung übernimmt und sich für sein Team einsetzt. Wer Ja-Sager sucht, ist bei mir falsch. Wer jemanden
+         mit Haltung, Substanz und echtem Drive will, ist genau richtig.</p>
     </div>
   </div>
 </section>
@@ -573,7 +612,7 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
       <div class="step reveal">
         <div class="num">1</div>
         <h4>Kennenlern-Call</h4>
-        <p>Kurz, ehrlich, auf Augenhöhe. Sie hören, wie ich denke, und ich verstehe, wo bei elunic gerade der Schuh drückt.</p>
+        <p>Kurz, ehrlich, direkt. Sie hören, wie ich denke, und ich verstehe, wo bei elunic gerade der Schuh drückt.</p>
         <div class="me">Mein Beitrag: zwei, drei konkrete Fragen, die zeigen, dass ich Ihr Produkt verstanden habe.</div>
       </div>
       <div class="step reveal d1">
@@ -585,7 +624,7 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
       <div class="step reveal d2">
         <div class="num">3</div>
         <h4>Kleiner Use Case</h4>
-        <p>Mein Heimspiel. Bau plus KI ist genau das, woran ich gerade selbst gebaut habe. Den Use Case bringe ich gern mit.</p>
+        <p>Genau hier liegt meine Stärke: Bau und KI zusammen habe ich gerade selbst gebaut. Den Use Case bringe ich gern mit.</p>
         <div class="me">Mein Beitrag: ein durchdachter Lösungsansatz, kein Bauchgefühl.</div>
       </div>
     </div>
@@ -603,7 +642,7 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
     <div class="eyebrow" style="color:#8fb6d6;justify-content:center;">08 · Der nächste Schritt</div>
     <h2>Lassen Sie uns den Kennenlern-Call machen.</h2>
     <p>Sie wollten ohnehin mit einem kurzen Call starten, dann ein Fachgespräch und einen kleinen Use Case. Den Use
-       Case bringe ich gern schon mit. Bau plus KI ist meine Heimat.</p>
+       Case bringe ich gern schon mit. Genau diese Kombination aus Bau und KI habe ich zuletzt selbst gebaut.</p>
     <div class="btns">
       <a class="btn primary" href="mailto:clarencejohnson@hotmail.de?subject=AI%20Consultant%20bei%20elunic%3A%20Kennenlern-Call">Kennenlern-Call vereinbaren</a>
       <a class="btn ghost" href="https://www.clarencejohnson.de" target="_blank" rel="noopener">Bau-Referenzen ansehen</a>
@@ -620,7 +659,6 @@ footer a{color:#8fb6d6;}footer a:hover{color:#fff;}
     <div>© 2026 Clarence Johnson · Bewerbung als AI Consultant (m/w/d) bei der elunic AG</div>
     <div>
       <a href="mailto:clarencejohnson@hotmail.de">clarencejohnson@hotmail.de</a> ·
-      <a href="https://www.clarencejohnson.de" target="_blank" rel="noopener">clarencejohnson.de</a> ·
       <a href="https://www.linkedin.com/in/clarence-johnson-898b50a4/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
@@ -681,9 +719,35 @@ var io4=new IntersectionObserver(function(es){
 },{threshold:.5});
 sections.forEach(function(s){if(s)io4.observe(s);});
 
-// pause hero bg when filmreel plays (avoid double audio/overlap)
+// sound toggle for the hero background video
+var heroVid=document.querySelector('.hero video');
+var sbtn=document.getElementById('soundbtn');
+var soundOn=false;
+if(sbtn&&heroVid){
+  sbtn.addEventListener('click',function(){
+    soundOn=!soundOn;
+    heroVid.muted=!soundOn;
+    if(soundOn){heroVid.play().catch(function(){});}
+    sbtn.classList.toggle('on',soundOn);
+    sbtn.querySelector('.ic').textContent=soundOn?'🔈':'🔊';
+    sbtn.querySelector('.tx').textContent=soundOn?'Ton aus':'Ton an';
+  });
+  // mute hero when it scrolls out of view; restore on return if user had sound on
+  var heroEl=document.getElementById('s-hero');
+  var ioH=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!soundOn)return;
+      heroVid.muted=!e.isIntersecting;
+      if(e.isIntersecting)heroVid.play().catch(function(){});
+    });
+  },{threshold:.35});
+  ioH.observe(heroEl);
+}
+
+// pause hero bg when the dedicated film reel plays (avoid double audio/overlap)
 var reel=document.getElementById('filmreel');
-if(reel){reel.addEventListener('play',function(){var hv=document.querySelector('.hero video');if(hv)hv.pause();});}
+if(reel){reel.addEventListener('play',function(){if(heroVid){heroVid.pause();}});
+  reel.addEventListener('pause',function(){if(heroVid&&soundOn){heroVid.play().catch(function(){});}});}
 </script>
 </body>
 </html>
